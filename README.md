@@ -194,3 +194,8 @@ For TanStack Start specific documentation, visit [TanStack Start](https://tansta
 
 # Executed commands
 `bun create cloudflare@latest`
+`bunx wrangler d1 create base_admin`
+`bun run cf-typegen`
+`bunx drizzle-kit generate --name "Inicial"`
+`bunx drizzle-kit generate --custom --name "Datos minimos"`
+`bunx wrangler d1 migrations apply base_admin --local`
