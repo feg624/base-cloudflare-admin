@@ -1,5 +1,17 @@
 # Project Instructions
 
+## Project Tech Stack
+
+- The project adopts the following libraries:
+   - Cloudflare Workers for deployment.
+   - Cloudflare D1 for server side database.
+   - Cloudflare R2 for object storage.
+   - Drizzle for SQLite ORM.
+   - TanStack Start as the library for fullstack development.
+   - Shadcn Admin Kit as the main library on top of TanStack Start.
+   - Bun as npm replacement, as it supports Typescript out of the box.
+   - Context7 as the MCP server for up to date documentation for the technology stack.
+
 ## Rules for Using shadcn MCP server
 
 1. **Always Check Registry First**
@@ -65,7 +77,7 @@ If no Data Provider was specified, simply use `ra-data-json-server`, and typicod
 You will need to install the `ra-data-json-server` package first:
 
 ```bash
-npm install ra-data-json-server
+bun add ra-data-json-server
 ```
 
 Here is an example showing how to use it:

@@ -1,0 +1,32 @@
+{
+  "general": {
+    "defaultApprovalMode": "auto_edit"
+  },
+  "context": {
+    "fileName": "AGENTS.md",
+    "fileFiltering": {
+      "respectGitIgnore": true,
+      "respectGeminiIgnore": true
+    }
+  },
+  "mcp": {
+    "allowed": [
+      "context7"
+    ]
+  },
+  "mcpServers": {
+    "context7": {
+      "command": "bunx",
+      "args": [
+        "-y",
+        "@upstash/context7-mcp"
+      ],
+      "env": {
+        "CONTEXT7_API_KEY": "$CONTEXT7_API_KEY"
+      }
+    }
+  },
+  "tools": {
+    "useRipgrep": true
+  }
+}
