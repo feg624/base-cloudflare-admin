@@ -15,6 +15,7 @@
 ## Dev environment tips
    - Use `bunx drizzle-kit generate --name <name>` to create a migration after having updated the Drizzle schema.ts file. Ask the user which name to use for the migration.
    - Use `bunx drizzle-kit generate --custom --name <name>` to create a custom migration, which allows the user to write custom SQL sentences. Ask the user which name to use for the migration.
+   - Whenever possible, don't make changes directly to files like package.json or schema.ts or Drizzle migrations if the corresponding library has available a command line to do so. Ask the user in case you have both alternatives, to identify which one suits better. 
 
 ## Rules for Using shadcn MCP server
 
