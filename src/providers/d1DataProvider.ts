@@ -1,7 +1,12 @@
 import { getListFn, getOneFn, getManyFn, getManyReferenceFn, createFn, updateFn, updateManyFn, deleteFn, deleteManyFn } from '@/server/db-functions'
+import { listUsersFn, createUserFn } from '@/server/user-functions'
 
 export const dataProvider = {
   getList: async (resource: string, params: any) => {
+    if (resource === 'users') {
+      const result = await listUsersFn({ data: { params } })
+      return result
+    }
     const result = await getListFn({ data: { resource, params } })
     return result
   },
@@ -22,6 +27,10 @@ export const dataProvider = {
   },
 
   create: async (resource: string, params: any) => {
+    if (resource === 'users') {
+      const result = await createUserFn({ data: { params } })
+      return result
+    }
     const result = await createFn({ data: { resource, params } })
     return result
   },

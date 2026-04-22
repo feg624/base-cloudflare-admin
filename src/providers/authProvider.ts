@@ -38,7 +38,9 @@ export const authProvider: AuthProvider = {
     }
   },
   getPermissions: async () => {
-    return Promise.resolve();
+    const { data: session } = await authClient.getSession();
+    //@ts-ignore
+    return session?.user.role;
   },
   getIdentity: async () => {
     const { data: session } = await authClient.getSession();
