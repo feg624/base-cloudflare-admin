@@ -31,6 +31,8 @@ Para definir las credenciales del usuario admin inicial, ejecutar:
 ## Variables de entorno
 - `BETTER_AUTH_SECRET` (en archivo .dev.vars)
 - `BETTER_AUTH_URL` (en archivo wrangler.jsonc)
+- `RESEND_API_KEY` (en archivo .dev.vars)
+- `RESEND_FROM_EMAIL` (en archivo .dev.vars)
 
 # Getting Started - TanStack Start app
 

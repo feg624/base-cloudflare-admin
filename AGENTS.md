@@ -11,6 +11,8 @@
    - Shadcn Admin Kit as the main library on top of TanStack Start.
    - Bun as npm replacement, as it supports Typescript out of the box.
    - Context7 as the MCP server for up to date documentation for the technology stack.
+   - Better-Auth for authentication.
+   - Resend for sending emails.
 
 ## Dev environment tips
    - Use `bunx drizzle-kit generate --name <name>` to create a migration after having updated the Drizzle schema.ts file. Ask the user which name to use for the migration.
@@ -163,3 +165,12 @@ The resource components, for example <Todo>, are located at `/src/app/Todo.tsx` 
 - `/src/providers` contains code that complements Shadcn Admin Kit with custom providers, like accesing the D1 database and the authentication provider.
 - `/src/routes` contains basic routes for TanStack.
 - `/src/server` contains TanStack server functions that complement the Shadcn Admin Kit custom providers.
+
+## Environment variables
+
+The environment variables are defined on .dev.vars and wrangler.jsonc files.
+
+- `BETTER_AUTH_SECRET`
+- `BETTER_AUTH_URL`
+- `RESEND_API_KEY`
+- `RESEND_FROM_EMAIL`

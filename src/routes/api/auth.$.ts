@@ -1,13 +1,15 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { getAuth } from "@/lib/auth";
 import { env } from "cloudflare:workers";
+// @ts-ignore
+import { context } from "cloudflare:workers";
 
 export const Route = createFileRoute("/api/auth/$")({
   server: {
     handlers: {
       GET: async ({ request }) => {
         try {
-          const auth = getAuth(env);
+          const auth = getAuth(env, context);
           return await auth.handler(request);
         } catch (e) {
           console.error("Auth Handler Error (GET):", e);
@@ -16,7 +18,7 @@ export const Route = createFileRoute("/api/auth/$")({
       },
       POST: async ({ request }) => {
         try {
-          const auth = getAuth(env);
+          const auth = getAuth(env, context);
           const response = await auth.handler(request);
           
           if (response.ok) {
